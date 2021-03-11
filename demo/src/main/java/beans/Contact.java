@@ -1,9 +1,14 @@
 package beans;
 
+import javax.persistence.*;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
+@Entity
 public class Contact {
-	private long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
 	private String name;
 	private String phone;
 	private String relationship;
@@ -43,7 +48,7 @@ public class Contact {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
