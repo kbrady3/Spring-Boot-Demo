@@ -8,12 +8,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.support.AbstractApplicationContext;
 
-import beans.Address;
-import beans.Contact;
-import controller.BeanConfiguration;
-import repository.ContactRepository;
+import dmacc.beans.Address;
+import dmacc.beans.Contact;
+import dmacc.controller.BeanConfiguration;
+import dmacc.repository.ContactRepository;
 
 @SpringBootApplication
 public class SpringContactsApplication implements CommandLineRunner{

@@ -1,4 +1,4 @@
-package beans;
+package dmacc.beans;
 
 import javax.persistence.Embeddable;
 
