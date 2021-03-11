@@ -1,10 +1,14 @@
-package dmacc.beans;
+package beans;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class Contact {
 	private long id;
 	private String name;
 	private String phone;
 	private String relationship;
+	@Autowired
+	private Address address;
 	
 	public Contact( ) {
 
@@ -12,7 +16,7 @@ public class Contact {
 		
 	public Contact(String name) {
 		super();
-		this.name = name;
+		this.relationship = "spouse";
 	}
 		
 	public Contact(String name, String phone, String relationship) {
@@ -32,7 +36,7 @@ public class Contact {
 
 	@Override
 	public String toString() {
-		return "Contact [id = “ + id + “, name=" + name + ", phone=" + phone + ", relationship=" + relationship + "]";
+		return "Contact [id = “ + id + “, name=" + name + ", phone=" + phone + ", relationship=" + relationship + ", " + address + "]";
 	}
 
 	public long getId() {
@@ -66,4 +70,13 @@ public class Contact {
 	public void setRelationship(String relationship) {
 		this.relationship = relationship;
 	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	
 }
